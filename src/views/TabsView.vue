@@ -40,21 +40,28 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: var(--color-header-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem; /* Increased spacing for better visibility */
+  flex-grow: 1;
+  justify-content: center;
 }
 
 nav a {
   color: var(--color-link);
   text-decoration: none;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
   color: var(--color-link-hover);
+  background-color: var(--color-button-bg);
 }
 
 button {
@@ -65,9 +72,43 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  margin-left: 1rem;
 }
 
 button:hover {
   background-color: var(--color-button-hover);
+}
+
+main {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: var(--color-main-bg);
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem; /* Reduced gap for smaller screens */
+    justify-content: flex-start;
+  }
+
+  nav a {
+    padding: 0.4rem 0.8rem; /* Adjust padding for mobile */
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+
+  button {
+    width: 100%; /* Full-width button for better tap experience */
+    margin: 0.5rem 0;
+    text-align: center;
+  }
 }
 </style>
