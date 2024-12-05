@@ -5,6 +5,7 @@
         <router-link to="/tabs/tab1">Tab 1</router-link>
         <router-link to="/tabs/tab2">Tab 2</router-link>
         <router-link to="/tabs/tab3">Tab 3</router-link>
+        <router-link to="/tabs/tab4">Tab 4</router-link>
       </nav>
       <button @click="logout">Logout</button>
     </header>

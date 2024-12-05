@@ -4,6 +4,7 @@ import TabsView from '../views/TabsView.vue'
 import Tab1 from '../views/Tab1.vue'
 import Tab2 from '../views/Tab2.vue'
 import Tab3 from '../views/Tab3.vue'
+import Tab4 from '../views/Tab4.vue'
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
         path: 'tab3',
         name: 'Tab3',
         component: Tab3,
+      },
+      {
+        path: 'tab4',
+        name: 'Tab4',
+        component: Tab4,
       },
     ],
   },
