@@ -17,22 +17,22 @@ const routes = [
   },
   {
     path: '/tabs',
-    name: 'tabs',
+    name: 'Tabs',
     component: TabsView,
     children: [
       {
         path: 'tab1',
-        name: 'tab1',
+        name: 'Tab1',
         component: Tab1,
       },
       {
         path: 'tab2',
-        name: 'tab2',
+        name: 'Tab2',
         component: Tab2,
       },
       {
         path: 'tab3',
-        name: 'tab3',
+        name: 'Tab3',
         component: Tab3,
       },
     ],

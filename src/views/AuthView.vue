@@ -19,13 +19,13 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../configs/firebase' // Import the initialized auth instance
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 
 const email = ref('')
 const password = ref('')
 const isLoginMode = ref(true)
 const router = useRouter()
-const auth = getAuth()
 
 async function handleSubmit() {
   try {
