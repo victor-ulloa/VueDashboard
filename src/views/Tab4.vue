@@ -1,18 +1,18 @@
 <template>
   <div class="chart-container">
     <h1>Sales Overview</h1>
-    <!-- Use the Chartkick component with type 'line' for a line chart -->
     <div>
-      <Chartkick type="line" :data="salesData" :options="chartOptions" />
+      <line-chart
+        :data="salesData"
+        title="Sales Over Time (2024)"
+        xtitle="Month"
+        ytitle="Sales ($)"
+        :colors="['#ff6600']"
+      />
     </div>
-    <!-- <Chartkick type="line" :data="salesData" :options="chartOptions" /> -->
   </div>
 </template>
-
 <script setup>
-import Chartkick from 'vue-chartkick' // Import the Chartkick component
-import 'chart.js' // Ensure chart.js is correctly imported for chart types
-
 // Sales data for the chart
 const salesData = [
   ['Jan', 50],
@@ -24,14 +24,6 @@ const salesData = [
   ['Jul', 150],
   ['Aug', 160],
 ]
-
-// Chart options for customizing the chart
-const chartOptions = {
-  title: 'Sales Over Time (2024)',
-  xtitle: 'Month',
-  ytitle: 'Sales ($)',
-  colors: ['#ff6600'], // Orange color for the line chart
-}
 </script>
 
 <style scoped>
